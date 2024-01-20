@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speech Timer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="speakerName" placeholder="Enter Speaker Name">
+
+        <select id="speechDuration">
+            <option value="short">Short Speech</option>
+            <option value="iceBreaker">Ice Breaker</option>
+            <option value="regular">Regular Speech</option>
+            <option value="evaluator">Individual Evaluator</option>
+            <option value="custom">Custom Time</option>
+        </select>
+        
+        <input type="number" id="customTime" placeholder="Enter minutes" style="display: none;">
+
+        <button id="startStopButton">Start</button>
+        <div id="timerDisplay">00:00</div>
+
+    </div>
+    <ul id="historyList"></ul>
+   <div id="barChartContainer">
+    <h2>Speaker Duration Chart</h2>
+    <button id="showTimeButton">Show Time</button>
+</div>
+
+    <audio id="clickSound" src="click.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

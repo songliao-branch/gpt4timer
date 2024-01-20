@@ -1,0 +1,77 @@
+/* styles.css */
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#timerDisplay {
+    font-size: 48px;
+    margin: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+}
+#barChartContainer {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.bar {
+    height: 20px;
+    background-color: gray; /* Default color, will be updated dynamically */
+    margin: 10px 0;
+    position: relative;
+    border: 1px solid black; /* Add black border */
+}
+
+.bar span {
+    position: absolute;
+    left: 5px;
+    line-height: 20px;
+    color: black; /* Change text color to black */
+    font-size: 14px;
+}
+/* ... existing CSS ... */
+
+.history-item {
+    position: relative;
+    padding: 5px;
+    list-style-type: none;
+}
+
+.remove-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* Initially hide the duration time */
+.duration-time {
+    display: none;
+}
+
+/* Show the duration time when hovering over the Show Time button */
+#showTimeButton:hover ~ #historyList .duration-time {
+    display: inline;
+}
+
+/* ... existing CSS ... */
